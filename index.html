@@ -2,19 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Subway Runner</title>
+  <title>Subway Runner Pro</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<h1>🚇 Subway Runner</h1>
-<h2 id="score">Score: 0</h2>
-
-<div id="game">
-  <div id="player"></div>
+<div class="ui">
+  <h1>🚇 Subway Runner</h1>
+  <div id="score">Score: 0</div>
+  <div id="highScore">High Score: 0</div>
 </div>
 
-<p>Controls: ← → or A/D to move | SPACE to jump</p>
+<div id="game">
+  <img id="player" src="assets/player.gif">
+  <img id="chaser" src="assets/police.png">
+</div>
+
+<audio id="jumpSound" src="assets/jump.mp3"></audio>
+<audio id="bgMusic" src="assets/music.mp3" loop></audio>
 
 <script src="script.js"></script>
 </body>
