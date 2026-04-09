@@ -2,17 +2,17 @@ body {
   text-align: center;
   font-family: Arial;
   background: #111;
-  color: #fff;
+  color: white;
 }
 
 #game {
   width: 400px;
-  height: 200px;
-  border: 2px solid white;
+  height: 300px;
   margin: auto;
+  border: 2px solid white;
   position: relative;
   overflow: hidden;
-  background: #222;
+  background: linear-gradient(#333, #111);
 }
 
 #player {
@@ -21,30 +21,24 @@ body {
   background: yellow;
   position: absolute;
   bottom: 0;
-  left: 50px;
+  left: 185px;
+  transition: left 0.2s;
 }
 
-#obstacle {
-  width: 20px;
+.obstacle {
+  width: 30px;
   height: 40px;
   background: red;
   position: absolute;
-  bottom: 0;
-  right: 0;
-  animation: move 2s linear infinite;
-}
-
-@keyframes move {
-  from { right: -20px; }
-  to { right: 400px; }
+  top: -40px;
 }
 
 .jump {
-  animation: jump 0.5s ease;
+  animation: jump 0.5s;
 }
 
 @keyframes jump {
   0% { bottom: 0; }
-  50% { bottom: 80px; }
+  50% { bottom: 100px; }
   100% { bottom: 0; }
 }
