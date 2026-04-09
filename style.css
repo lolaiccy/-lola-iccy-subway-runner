@@ -1,44 +1,58 @@
 body {
-  text-align: center;
-  font-family: Arial;
-  background: #111;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #00c6ff, #0072ff);
   color: white;
+  text-align: center;
+}
+
+.ui {
+  padding: 10px;
 }
 
 #game {
   width: 400px;
-  height: 300px;
+  height: 500px;
   margin: auto;
-  border: 2px solid white;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(#333, #111);
+  border: 3px solid white;
+
+  background: url("assets/bg.png") repeat-y;
+  background-size: cover;
+  animation: bgScroll 5s linear infinite;
+}
+
+@keyframes bgScroll {
+  from { background-position-y: 0; }
+  to { background-position-y: 500px; }
 }
 
 #player {
-  width: 30px;
-  height: 30px;
-  background: yellow;
+  width: 60px;
   position: absolute;
   bottom: 0;
-  left: 185px;
-  transition: left 0.2s;
+  left: 170px;
+  transition: left 0.15s;
+}
+
+#chaser {
+  width: 60px;
+  position: absolute;
+  bottom: 0;
+  left: 170px;
+  opacity: 0.4;
+}
+
+.obstacle, .coin {
+  position: absolute;
+  top: -60px;
 }
 
 .obstacle {
+  width: 50px;
+}
+
+.coin {
   width: 30px;
-  height: 40px;
-  background: red;
-  position: absolute;
-  top: -40px;
-}
-
-.jump {
-  animation: jump 0.5s;
-}
-
-@keyframes jump {
-  0% { bottom: 0; }
-  50% { bottom: 100px; }
-  100% { bottom: 0; }
 }
